@@ -15,3 +15,10 @@ If you are working on your folder , and you have committed some changes , and th
 ###### This if more than one commit
 1. `git log` to copy the commit hash of from where to where [first commit , where you need to revert to].
 2. `git revert <first-commit>...<destination-commit>`
+
+###### This if you want to revert to specific commit without commiting the revert
+1. `git log` to copy the commit hash where you need to revert (go back in time with commit).
+2. `git revert -n <destination-commit>`
+
+##### Resetting changes :
+If you want to go back in time to specific commit and you realized that after this commit all the changes are useless and you don't need them
