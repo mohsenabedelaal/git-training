@@ -21,4 +21,28 @@ If you are working on your folder , and you have committed some changes , and th
 2. `git revert -n <destination-commit>`
 
 ##### Resetting changes :
-If you want to go back in time to specific commit and you realized that after this commit all the changes are useless and you don't need them
+If you want to go back in time to specific commit and you realized that after this commit all the changes are useless and you don't need them . 
+
+###### This will go back to destination commit and delete the commits after it and remove all you current changes :
+1. `git log` copy commit hash destination.
+2. `git reset --hard <destination-commit>`
+
+###### This will go back to destination commit and delete the commits after it and will put all the deleted commit changes in stage level (which mean added "git add ") :
+1. `git log` copy commit hash destination.
+2. `git reset --soft <destination-commit>`
+
+[![soft reset](https://blog.kakaocdn.net/dn/bJHSNY/btqFIjGZw4n/EpNcbqnJk8MZ1xjTpk235k/img.gif "soft reset")](https://blog.kakaocdn.net/dn/bJHSNY/btqFIjGZw4n/EpNcbqnJk8MZ1xjTpk235k/img.gif "soft reset")
+
+###### This will go back to destination commit and delete the commits after it and will put all the deleted commit changes in directory level (which mean need to be added to go to stage level) :
+
+1. `git log` copy commit hash destination.
+2. `git reset --mixed <destination-commit>`
+
+[![mixed vs soft vs hard reset](https://i.stack.imgur.com/qRAte.jpg "mixed vs soft vs hard reset")](https://i.stack.imgur.com/qRAte.jpg "mixed vs soft vs hard reset")
+
+
+
+
+
+
+
